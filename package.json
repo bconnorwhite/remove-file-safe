@@ -1,6 +1,6 @@
 {
   "name": "remove-file-safe",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Remove files without try catch",
   "license": "MIT",
   "author": {
