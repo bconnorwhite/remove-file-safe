@@ -1,5 +1,7 @@
 <div align="center">
-  <h1>remove-file-safe</h1>
+  <a href="https://github.com/bconnorwhite/remove-file-safe">
+    <img alt="remove-file-safe" src="assets/header.svg" />
+  </a>
   <a href="https://npmjs.com/package/remove-file-safe">
     <img alt="NPM" src="https://img.shields.io/npm/v/remove-file-safe.svg">
   </a>
@@ -36,6 +38,7 @@ npm install remove-file-safe
 ```
 
 ## API
+
 ```ts
 import { removeFile, removeFileSync } from "remove-file-safe";
 
@@ -59,8 +62,11 @@ function removeFileSync(path: string): boolean | undefined;
 
 [MIT](https://opensource.org/licenses/MIT)
 
+<br />
+
 ## Related Packages
 
+- [fs-safe](https://www.npmjs.com/package/fs-safe): A simple fs wrapper that doesn't throw
 - [read-file-safe](https://www.npmjs.com/package/remove-file-safe): Read files without try catch
 - [write-file-safe](https://www.npmjs.com/package/write-file-safe): Write files, and parent directories if necessary
 - [read-dir-safe](https://www.npmjs.com/package/read-dir-safe): Read directories recursively or non-recursively
