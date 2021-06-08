@@ -27,7 +27,7 @@ beforeEach(async () => {
   }, {
     createCwd: false,
     createTmp: false
-  })
+  });
 });
 
 afterEach(async () => {
