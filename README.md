@@ -1,7 +1,5 @@
 <div align="center">
-  <a href="https://github.com/bconnorwhite/remove-file-safe">
-    <img alt="remove-file-safe" src="assets/header.svg" />
-  </a>
+  <h1>remove-file-safe</h1>
   <a href="https://npmjs.com/package/remove-file-safe">
     <img alt="NPM" src="https://img.shields.io/npm/v/remove-file-safe.svg">
   </a>
@@ -9,7 +7,7 @@
     <img alt="TypeScript" src="https://img.shields.io/github/languages/top/bconnorwhite/remove-file-safe.svg">
   </a>
   <a href='https://coveralls.io/github/bconnorwhite/remove-file-safe?branch=master'>
-    <img alt="Coverage Status" src="https://img.shields.io/coveralls/github/bconnorwhite/remove-file-safe.svg?branch=master">
+    <img alt="Coverage Status" src="https://img.shields.io/coveralls/github/bconnorwhite/remove-file-safe/badge.svg?branch=master">
   </a>
   <a href="https://github.com/bconnorwhite/remove-file-safe">
     <img alt="GitHub Stars" src="https://img.shields.io/github/stars/bconnorwhite/remove-file-safe?label=Stars%20Appreciated%21&style=social">
@@ -27,6 +25,8 @@
 - Returns `false` if unable to remove file.
 - Returns `undefined` on other errors (ex: permission denied) rather than throwing.
 
+Unless the `unsafe` flag is set, only files inside the current working directory or OS temp directory will be removed.
+
 ## Installation
 
 ```sh
@@ -40,12 +40,25 @@ npm install remove-file-safe
 ## API
 
 ```ts
-import { removeFile, removeFileSync } from "remove-file-safe";
+import { removeFile, removeFileSync, Options } from "remove-file-safe";
 
-function removeFile(path: string): Promise<boolean | undefined>;
+function removeFile(path: string, options?: Options): Promise<boolean | undefined>;
 
-function removeFileSync(path: string): boolean | undefined;
+function removeFileSync(path: string, options?: Options): boolean | undefined;
+
+type Options = {
+  /**
+   * Allow removals outside of current working directory, or OS temp directory. Default: `false`
+   */
+  unsafe?: boolean;
+};
 ```
+
+<br />
+
+<h2>Dependencies<img align="right" alt="dependencies" src="https://img.shields.io/david/bconnorwhite/remove-dir-safe.svg"></h2>
+
+- [is-path-inside](https://www.npmjs.com/package/is-path-inside): Check if a path is inside another path
 
 <br />
 

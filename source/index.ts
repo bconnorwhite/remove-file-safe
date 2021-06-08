@@ -1,4 +1,13 @@
 import { promises, unlinkSync } from "fs";
+import { tmpdir } from "os";
+import isPathInside from "is-path-inside";
+
+export type Options = {
+  /**
+   * Allow removals outside of current working directory, or OS temp directory. Default: `false`
+   */
+  unsafe?: boolean;
+};
 
 function handleError(err: any) {
   if(err.code === "ENOENT") {
@@ -10,19 +19,35 @@ function handleError(err: any) {
   }
 }
 
-export async function removeFile(path: string) {
-  return promises.unlink(path).then(() => {
+function validatePath(path: string, options: Options) {
+  if(options.unsafe) {
     return true;
-  }).catch((err) => {
-    return handleError(err);
-  });
+  } else {
+    return isPathInside(path, process.cwd()) || isPathInside(path, tmpdir());
+  }
 }
 
-export function removeFileSync(path: string) {
-  try {
-    unlinkSync(path);
-    return true;
-  } catch(err) {
-    return handleError(err);
+export async function removeFile(path: string, options: Options = {}) {
+  if(validatePath(path, options)) {
+    return promises.unlink(path).then(() => {
+      return true;
+    }).catch((err) => {
+      return handleError(err);
+    });
+  } else {
+    return undefined;
+  }
+}
+
+export function removeFileSync(path: string, options: Options = {}) {
+  if(validatePath(path, options)) {
+    try {
+      unlinkSync(path);
+      return true;
+    } catch(err) {
+      return handleError(err);
+    }
+  } else {
+    return undefined;
   }
 }
