@@ -1,3 +1,7 @@
+# [3.0.0](https://github.com/bconnorwhite/remove-file-safe/compare/v2.0.0...v3.0.0) (2023-01-12)
+
+
+
 # [2.0.0](https://github.com/bconnorwhite/remove-file-safe/compare/v1.0.1...v2.0.0) (2021-06-08)
 
 
