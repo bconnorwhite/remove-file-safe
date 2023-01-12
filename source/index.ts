@@ -1,5 +1,5 @@
-import { promises, unlinkSync } from "fs";
-import { tmpdir } from "os";
+import { promises, unlinkSync } from "node:fs";
+import { tmpdir } from "node:os";
 import isPathInside from "is-path-inside";
 
 export type Options = {

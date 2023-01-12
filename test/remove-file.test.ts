@@ -1,7 +1,7 @@
-import { beforeEach, test } from "@jest/globals";
+import { beforeEach, test, expect, afterEach } from "@jest/globals";
 import mock, { restore, directory } from "mock-fs";
-import { tmpdir } from "os";
-import { join } from "path";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { removeFile } from "../source";
 
 beforeEach(async () => {

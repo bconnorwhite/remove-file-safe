@@ -1,4 +1,5 @@
-<div align="center">
+<!--BEGIN HEADER-->
+<div id="top" align="center">
   <h1>remove-file-safe</h1>
   <a href="https://npmjs.com/package/remove-file-safe">
     <img alt="NPM" src="https://img.shields.io/npm/v/remove-file-safe.svg">
@@ -6,21 +7,31 @@
   <a href="https://github.com/bconnorwhite/remove-file-safe">
     <img alt="TypeScript" src="https://img.shields.io/github/languages/top/bconnorwhite/remove-file-safe.svg">
   </a>
-  <a href='https://coveralls.io/github/bconnorwhite/remove-file-safe?branch=master'>
-    <img alt="Coverage Status" src="https://img.shields.io/coveralls/github/bconnorwhite/remove-file-safe/badge.svg?branch=master">
-  </a>
-  <a href="https://github.com/bconnorwhite/remove-file-safe">
-    <img alt="GitHub Stars" src="https://img.shields.io/github/stars/bconnorwhite/remove-file-safe?label=Stars%20Appreciated%21&style=social">
-  </a>
-  <a href="https://twitter.com/bconnorwhite">
-    <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/bconnorwhite.svg?label=%40bconnorwhite&style=social">
+  <a href="https://coveralls.io/github/bconnorwhite/remove-file-safe?branch=master">
+    <img alt="Coverage Status" src="https://img.shields.io/coveralls/github/bconnorwhite/remove-file-safe.svg?branch=master">
   </a>
 </div>
 
 <br />
 
-> Remove files without try catch.
+<blockquote align="center">Remove files without try catch.</blockquote>
 
+<br />
+
+_If I should maintain this repo, please ⭐️_
+<a href="https://github.com/bconnorwhite/remove-file-safe">
+  <img align="right" alt="GitHub stars" src="https://img.shields.io/github/stars/bconnorwhite/remove-file-safe?label=%E2%AD%90%EF%B8%8F&style=social">
+</a>
+
+_DM me on [Twitter](https://twitter.com/bconnorwhite) if you have questions or suggestions._
+<a href="https://twitter.com/bconnorwhite">
+  <img align="right" alt="Twitter" src="https://img.shields.io/twitter/url?label=%40bconnorwhite&style=social&url=https%3A%2F%2Ftwitter.com%2Fbconnorwhite">
+</a>
+
+---
+<!--END HEADER-->
+
+> Remove files without try catch.
 - Returns `true` if file no longer exists.
 - Returns `false` if unable to remove file.
 - Returns `undefined` on other errors (ex: permission denied) rather than throwing.
@@ -37,7 +48,11 @@ yarn add remove-file-safe
 npm install remove-file-safe
 ```
 
-## API
+```sh
+pnpm add remove-file-safe
+```
+
+## Usage
 
 ```ts
 import { removeFile, removeFileSync, Options } from "remove-file-safe";
@@ -53,27 +68,29 @@ type Options = {
   unsafe?: boolean;
 };
 ```
+<!--BEGIN FOOTER-->
 
 <br />
 
-<h2>Dependencies<img align="right" alt="dependencies" src="https://img.shields.io/david/bconnorwhite/remove-dir-safe.svg"></h2>
+<h2 id="dependencies">Dependencies<a href="https://www.npmjs.com/package/remove-file-safe?activeTab=dependencies"><img align="right" alt="dependencies" src="https://img.shields.io/librariesio/release/npm/remove-file-safe.svg"></a></h2>
 
 - [is-path-inside](https://www.npmjs.com/package/is-path-inside): Check if a path is inside another path
 
 <br />
 
-<h2>Dev Dependencies<img align="right" alt="David" src="https://img.shields.io/david/dev/bconnorwhite/remove-file-safe.svg"></h2>
+<h3>Dev Dependencies</h3>
 
-- [@bconnorwhite/bob](https://www.npmjs.com/package/@bconnorwhite/bob): undefined
-- [@types/mock-fs](https://www.npmjs.com/package/@types/mock-fs): undefined
+- [@types/mock-fs](https://www.npmjs.com/package/@types/mock-fs): TypeScript definitions for mock-fs
 - [@types/node](https://www.npmjs.com/package/@types/node): TypeScript definitions for Node.js
+- [autorepo](https://www.npmjs.com/package/autorepo): Autorepo abstracts away your dev dependencies, providing a single command to run all of your scripts.
 - [mock-fs](https://www.npmjs.com/package/mock-fs): A configurable mock file system.  You know, for testing.
 
 <br />
 
-<h2>License <img align="right" alt="license" src="https://img.shields.io/npm/l/remove-file-safe.svg"></h2>
+<h2 id="license">License <a href="https://opensource.org/licenses/MIT"><img align="right" alt="license" src="https://img.shields.io/npm/l/remove-file-safe.svg"></a></h2>
 
 [MIT](https://opensource.org/licenses/MIT)
+<!--END FOOTER-->
 
 <br />
 
